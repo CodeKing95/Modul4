@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aufgabe 1</title>
+    <script>
+      const list = [4, 6, 2, 8];
+      console.log(list);
+
+      function add() {
+        const value = Number(document.getElementById("content").value);
+        list.push(value);
+      }
+
+      function deleteByPosition() {
+        const position = document.getElementById("deletePosition").value;
+        if (position < list.length) {
+          list.splice(position, 1);
+        } else {
+          console.log("Die Position muss kleiner als " + list.length + "sein");
+        }
+      }
+
+      function deletebyContent() {
+        const content = Number(document.getElementById("deleteContent").value);
+        const newList = list.filter((element) => {
+          return element !== content;
+        });
+        list = newlist;
+      }
+
+      function printAll() {
+        console.log(list);
+        list.forEach((element) => {
+          console.log(element);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    Eintragen: <input type="number" id="content" />
+    <button onclick="add()">Eintragen</button>
+
+    Delete Position: <input tpye="number" id="deletePosition" />
+    <button onclick="deleteByPosition()">Delete</button>
+
+    Inhalt Delete: <input type="number" id="deleteContent" />
+    <button onclick="deletebyContent()">Delete</button>
+
+    <button onClick="printAll()">Anzeigen</button>
+  </body>
+</html>

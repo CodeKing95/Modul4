@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+    <script>
+      const list = [2, 4, 6, 8];
+      console.log(list);
+
+      list.push(6);
+      console.log(list.length);
+      console.log(list);
+      const lastElement = list.pop();
+      console.log(lastElement);
+      console.log(list);
+
+      console.log(list[1]);
+      console.log(list[list.length - 1]);
+
+      list.splice(1, 1);
+      console.log(list);
+
+      list.splice(1, 0, 8);
+      console.log(list);
+
+      function ausgabe(element) {
+        console.log(element);
+      }
+
+      list.forEach((element) => {
+        console.log(element);
+      });
+
+      for (let i = 0; i < list.length; i++) {
+        console.log(list[1]);
+      }
+
+      const filteredlist = list.filter((element) => {
+        return element < 5;
+      });
+
+      console.log(filteredlist);
+    </script>
+  </head>
+  <body></body>
+</html>
